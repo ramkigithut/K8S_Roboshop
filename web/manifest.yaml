@@ -9,6 +9,7 @@ metadata:
 spec:
   containers:
     - name: web-server-nginx
+      imagePullPolicy: Always
       image: ramakrishnareddithi/web:k8
       ports:
         - containerPort: 80
