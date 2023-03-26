@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    environment: prod
+    app: web
+spec:
+  containers:
+    - name: web-server-nginx
+      image: ramakrishnareddithi/web:k8
+      ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  type: LoadBalancer
+  selector:
+    environment: prod
+    app: web
+  ports:
+    - protocol: TCP
+      Port: 80
+      targetPort: 80
+---
