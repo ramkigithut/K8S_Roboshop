@@ -22,14 +22,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-service
+  name: mongodb-service
 spec:
-  type: LoadBalancer
   selector:
     environment: prod
-    app: web
+    app: mongodb
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 27017
+      targetPort: 27017
 ---
