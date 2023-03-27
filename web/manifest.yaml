@@ -32,6 +32,6 @@ spec:
     app: web
   ports:
     - protocol: TCP
-      Port: 80
+      port: 80
       targetPort: 80
 ---
