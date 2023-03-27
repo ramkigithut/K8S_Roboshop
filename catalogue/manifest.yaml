@@ -10,7 +10,7 @@ spec:
   containers:
     - name: server-catalogue
       imagePullPolicy: Always
-      image: ramakrishnareddithi/catalogue:v1
+      image: ramakrishnareddithi/catalogue:k8
       resources:
         requests:
           cpu: "100m"
